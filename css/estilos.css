@@ -1,0 +1,346 @@
+:root{
+    --White: hsl(0, 0%, 100%);
+    --Black: hsl(0, 0%, 0%);
+    --Dark-Gray: hsl(0, 0%, 55%);
+    --Very-Dark-Gray: hsl(0, 0%, 41%);
+}
+*,*::before,*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+  font-size: 15px;
+}
+a{
+  text-decoration: none;
+  color: var(--White);
+}
+li{
+  list-style-type: none;
+}
+
+.l-container{
+    width: 100%;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/************** Seccion Banner ************************/
+.banner{
+    position: relative;
+     height: 70vh;
+    background: #000;
+  }
+  .banner-img{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: .3;
+  }
+  .banner-content{
+    position: absolute;
+    left: 10%;
+    bottom: 20%;
+    border: 2px solid var(--White);
+    padding: 1em;
+    color: #fff;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .banner-content h1{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    font-size: 3rem;
+    text-transform: uppercase;
+  }
+  /********* Seccion menu **********/
+  .header{
+    position: absolute;
+    top: 2rem;
+    z-index: 100;
+    width: 100%;
+    background: transparent;
+    height: 140px;
+}
+
+.header-menu{
+  display: flex;
+  justify-content: space-between;
+}
+.navigation{
+  display: flex;
+  align-items: center;
+}
+.navigation a{
+  text-decoration: none;
+  font-size: 1.2em;
+  margin-right: 1em;
+  color: var(--White);
+  /* position: relative; */
+}
+.menu-item{
+  position: relative;
+}
+.menu-item::before{
+  content: '';
+    height: 1px;
+    width: 50%;
+    background: var(--White);
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    left: 25%;
+}
+.navigation a:hover::before{
+  opacity: 1;
+}
+.close,.logo-nav,.burger{
+  display: none;
+}
+/******************************************/
+.interactive-section{
+  position: relative;
+  top: 0;
+  padding: 7em;
+  display: flex;
+  align-items: flex-end;
+}
+.img-interact{
+  max-width: 100%;
+  display: block;
+}
+.interactive-text{
+  width: 50%;
+  position: relative;
+  left: -8em;
+  background: var(--White);
+  padding: 2em;
+}
+.interactive-text h2{
+  font-size: 3rem;
+  font-family: 'Josefin Sans', sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-bottom: .4em;
+}
+.interactive-text p{
+  line-height: 1.7;
+}
+/***********************************/
+.sec-creations{
+  padding: 1em;
+}
+.creation-header{
+  display: flex;
+  justify-content:space-between;
+  padding: 2em 0; 
+}
+.creation-header h2{
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+}
+.btn-creation{
+  padding: 1em 3em;
+  background: var(--White);
+  border: 1px solid var(--Black);
+  font-family: 'Alata', sans-serif;
+  font-weight: 400;
+}
+.btn-creation:hover{
+  cursor: pointer;
+  background: var(--Black);
+  color: var(--White);
+}
+.creation-container{
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(256px, 1fr) );
+  grid-template-rows: auto;
+  row-gap: 2em;
+  column-gap: 2em;
+}
+.creation-card{
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  background: var(--Black);
+}
+.img-creation{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: .3;
+}
+.creation-txt{
+  position: absolute;
+  bottom: 1em;
+  left: 1em;
+  color: var(--White);
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  font-size: 2em;
+}
+.creation-card:hover{
+  background: var(--White);
+  cursor: pointer;
+}
+/****** Footer **********/
+.footer{
+  margin-top: 7em;
+  padding: 1em;
+  background: var(--Black);
+  color: var(--White);
+}
+.footer-content{
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+.footer-menu{
+  display: flex;
+  margin-top: 2em;
+}
+.footer-menu li{
+  margin-right: 2em;
+}
+.cont-redes{
+  margin: 1em 0;
+  display: flex;
+  justify-content: flex-end;
+}
+.cont-redes a{
+  margin-right: 1em;
+}
+.cont-redes a:last-child{
+  margin-right: 0;
+}
+.link-footer{
+  position: relative;
+}
+.link-footer::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  opacity: 0;
+  left: 25%;
+  width: 50%;
+  height: 1px;
+  background: var(--White);
+}
+.link-footer:hover::before{
+  opacity: 1;
+}
+  @media (max-width:800px){
+      .banner{
+          height: 100vh;
+      }
+      .banner-content{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        width: 90%;
+        max-width: 300px;
+      }
+      .banner-content h1{
+          font-size: 2rem;
+      }
+      .header{
+        padding: 2rem;
+      }
+      .navigation{
+        display: none;
+        background: var(--Black);
+      }
+      .menu-item{
+        padding: .4em 0;
+        margin-left: 2em;
+        text-transform: uppercase;
+      }
+      
+      .navigation.active{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .close,.logo-nav,.burger{
+        display: block;
+      }
+      .close{
+        position: absolute;
+        top: 2em;
+        right: 2em;
+      }
+      .logo-nav{
+        position: absolute;
+        top: 2em;
+        left: 2em;
+      }
+      .interactive-section{
+        padding: 1em;
+        flex-direction: column;
+      }
+      .interactive-text{
+        padding: 0;
+        width: 100%;
+        padding: 1em 0;
+        left: 0;
+      }
+      .creation-container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        row-gap: 2em;
+      }
+      .creation-card{
+        height: 50vh;
+      }
+      .footer-navigation{
+        text-align: center;
+      }
+      .footer-menu{
+        flex-direction: column;
+        align-items: center;
+      }
+      .footer-menu li{
+        margin: 1em 0;
+      }
+      .footer-content{
+        flex-direction: column;
+        padding: 2em 0;
+      }
+      .footer-redes{
+        text-align: center;
+      }
+      .cont-redes{
+        justify-content: center;
+        margin-top: 4em;
+      }
+      .cont-redes a{
+        margin-right: 1.4em;
+      }
+      .cont-redes a:last-child{
+        margin-right: 0;
+      }
+    }
